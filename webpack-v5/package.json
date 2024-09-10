@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack build",
-    "dev:local": "serve -s dist"
+    "preview": "serve -s dist",
+    "dev:local": "webpack build && serve -s dist",
+    "glzy": "npx webpack --config ./config/webpack.config.glzy.js --mode=development && serve -s dist",
+    "glsc": "npx webpack --config ./config/webpack.config.glsc.js --mode=development && serve -s dist",
+    "kfhj:build": "npx webpack --config ./config/webpack.config.kfhj.js && serve -s dist",
+    "kfhj": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
